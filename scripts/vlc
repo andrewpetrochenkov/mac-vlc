@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+{ set +x; } 2>/dev/null
+
+usage() {
+    cat <<EOF
+usage: $(basename $0) command [options]
+
+Available commands:
+    play                    play current item
+    playing                 detect playing
+    pause                   pause
+
+    volume                  get/set volume
+
+    path                    current item path
+    duration                duration
+    time                    time
+
+    fullscreen-detect       return true/false if fullscreen active
+    fullscreen-enter        enter fullscreen
+    fullscreen-exit         exit fullscreen
+
+    kill                    kill VLC.app process
+    pid                     VLC.app pid
+
+EOF
+    [[ $1 == "-h" ]] || [[ $1 == "--help" ]]; exit
+}
+
+[[ $1 == "-h" ]] || [[ $1 == "--help" ]] && usage "$@"
+
+[[ $OSTYPE != *"darwin"* ]] && echo "OS X only" && exit
+[[ $# == 0 ]] && usage
+
+# path/to/bin/vlc
+# path/to/bin/vlc-command
+
+"${BASH_SOURCE[0]%/*}"/"${BASH_SOURCE[0]##*/}"-"$1" "${@:2}"
