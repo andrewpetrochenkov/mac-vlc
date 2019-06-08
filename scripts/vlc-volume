@@ -2,7 +2,7 @@
 { set +x; } 2>/dev/null
 
 usage() {
-    echo "usage: $(basename $0) [volume]"
+    echo "usage: $(basename $0) [volume]" 1>&2
     [[ $1 == "-h" ]] || [[ $1 == "--help" ]]; exit
 }
 

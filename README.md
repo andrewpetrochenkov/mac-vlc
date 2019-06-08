@@ -55,7 +55,7 @@ fullscreen
 ```bash
 $ vlc fullscreen-enter
 $ vlc fullscreen-detect
-true
+1
 $ vlc fullscreen-exit
 ```
 
