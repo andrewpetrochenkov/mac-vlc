@@ -11,4 +11,5 @@ usage() {
 pid="$(vlc pid)" || exit
 [[ -z $pid ]] && exit
 
-osascript "${BASH_SOURCE[0]%/*}"/."${BASH_SOURCE[0]##*/}".applescript "$@"
+out=$(osascript "${BASH_SOURCE[0]%/*}"/."${BASH_SOURCE[0]##*/}".applescript "$@") || exit
+[[ -z "$out" ]] && out=0; echo $out

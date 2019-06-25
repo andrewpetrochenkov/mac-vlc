@@ -20,6 +20,8 @@ Available commands:
     fullscreen-enter        enter fullscreen
     fullscreen-exit         exit fullscreen
 
+    frontmost               print 1 if 'VLC.app' is frontmost, else 0
+
     kill                    kill VLC.app process
     pid                     VLC.app pid
 

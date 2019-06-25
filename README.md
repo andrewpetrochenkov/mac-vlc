@@ -22,6 +22,7 @@ command|`usage`
 -|-
 `vlc` |`usage: vlc command [options]`
 `vlc-duration` |`usage: vlc-duration`
+[`vlc-frontmost`](# "print 1 if 'VLC.app' is frontmost, else 0") |`usage: vlc-frontmost`
 `vlc-fullscreen-detect` |`usage: vlc-fullscreen-detect`
 `vlc-fullscreen-enter` |`usage: vlc-fullscreen-enter`
 `vlc-fullscreen-exit` |`usage: vlc-fullscreen-exit`
@@ -31,7 +32,7 @@ command|`usage`
 `vlc-pause` |`usage: vlc-pause`
 `vlc-pid` |`usage: vlc-pid`
 `vlc-play` |`usage: vlc-play`
-`vlc-playing` |`usage: vlc-playing`
+[`vlc-playing`](# "print 1 if playing, else 0") |`usage: vlc-playing`
 `vlc-time` |`usage: vlc-time`
 `vlc-volume` |`usage: vlc-volume [volume]`
 
@@ -41,7 +42,7 @@ $ vlc open "path/to/pron.avi"
 $ vlc pause
 $ vlc play
 $ vlc playing
-true
+1
 ```
 
 volume
@@ -58,6 +59,13 @@ $ vlc fullscreen-detect
 1
 $ vlc fullscreen-exit
 ```
+
+frontmost (`1` or `0`)
+```bash
+$ vlc frontmost
+0
+```
+
 
 VLC.app process
 ```bash

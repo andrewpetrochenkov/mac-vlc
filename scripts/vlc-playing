@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-{ set +x; } 2>/dev/null
+#
+# print 1 if playing, else 0
+
 
 usage() {
     echo "usage: $(basename $0)" 1>&2
@@ -11,4 +13,5 @@ usage() {
 pid="$(vlc pid)" || exit
 [[ -z $pid ]] && exit
 
-osascript "${BASH_SOURCE[0]%/*}"/."${BASH_SOURCE[0]##*/}".applescript "$@"
+out=$(osascript "${BASH_SOURCE[0]%/*}"/."${BASH_SOURCE[0]##*/}".applescript "$@") || exit
+[[ -z "$out" ]] && out=0; echo $out
