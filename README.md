@@ -1,40 +1,22 @@
 <!--
-https://pypi.org/project/readme-generator/
-https://pypi.org/project/python-readme-generator/
+https://readme42.com
 -->
 
-[![](https://img.shields.io/badge/OS-macOS-blue.svg?longCache=True)]()
-[![](https://img.shields.io/badge/language-AppleScript-blue.svg?longCache=True)]()
-[![](https://img.shields.io/pypi/v/mac-vlc.svg?maxAge=3600)](https://pypi.org/project/mac-vlc/)
-[![](https://img.shields.io/npm/v/mac-vlc.svg?maxAge=3600)](https://www.npmjs.com/package/mac-vlc)
-[![Travis](https://api.travis-ci.org/looking-for-a-job/mac-vlc.svg?branch=master)](https://travis-ci.org/looking-for-a-job/mac-vlc/)
 
-#### Installation
-```bash
-$ [sudo] npm i -g mac-vlc
-```
+
+[![](https://img.shields.io/badge/OS-Unix-blue.svg?longCache=True)]()
+[![](https://img.shields.io/pypi/v/mac-vlc.svg?maxAge=3600)](https://pypi.org/project/mac-vlc/)
+[![](https://img.shields.io/npm/v/mac-vlc.svg?maxAge=3600)](https://www.npmjs.com/package/mac-vlc)[![](https://img.shields.io/badge/License-Unlicense-blue.svg?longCache=True)](https://unlicense.org/)
+[![](https://github.com/andrewp-as-is/mac-vlc/workflows/tests42/badge.svg)](https://github.com/andrewp-as-is/mac-vlc/actions)
+
+### Installation
 ```bash
 $ [sudo] pip install mac-vlc
 ```
 
-#### Scripts usage
-command|`usage`
--|-
-`vlc` |`usage: vlc command [options]`
-`vlc-duration` |`usage: vlc-duration`
-[`vlc-frontmost`](# "print 1 if 'VLC.app' is frontmost, else 0") |`usage: vlc-frontmost`
-`vlc-fullscreen-detect` |`usage: vlc-fullscreen-detect`
-`vlc-fullscreen-enter` |`usage: vlc-fullscreen-enter`
-`vlc-fullscreen-exit` |`usage: vlc-fullscreen-exit`
-`vlc-kill` |`usage: vlc-kill`
-`vlc-open` |`usage: vlc-open path`
-`vlc-path` |`usage: vlc-path`
-`vlc-pause` |`usage: vlc-pause`
-`vlc-pid` |`usage: vlc-pid`
-`vlc-play` |`usage: vlc-play`
-[`vlc-playing`](# "print 1 if playing, else 0") |`usage: vlc-playing`
-`vlc-time` |`usage: vlc-time`
-`vlc-volume` |`usage: vlc-volume [volume]`
+```bash
+$ [sudo] npm i -g mac-vlc
+```
 
 #### Examples
 ```bash
@@ -66,8 +48,7 @@ $ vlc frontmost
 0
 ```
 
-
-VLC.app process
+`VLC.app` process
 ```bash
 $ vlc pid
 5726
@@ -75,5 +56,5 @@ $ vlc kill
 ```
 
 <p align="center">
-    <a href="https://pypi.org/project/python-readme-generator/">python-readme-generator</a>
+    <a href="https://readme42.com/">readme42.com</a>
 </p>

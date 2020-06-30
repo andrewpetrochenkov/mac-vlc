@@ -3,8 +3,7 @@
 try
   tell application "VLC" to set fullscreen mode to false
 on error errorMessage number errorNumber
-  if (errorNumber is equal to -609) --Connection is invalid. (-609)
-    return
-  end if
+  --Connection is invalid. (-609)
+  if (errorNumber is in {-609}) then return
   error errorMessage number errorNumber
 end try

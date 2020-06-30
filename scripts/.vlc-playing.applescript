@@ -8,9 +8,9 @@ tell application "VLC"
       return 0
     end if
   on error errorMessage number errorNumber
-    if (errorNumber is equal to -609) --Connection is invalid. (-609)
-      return
-    end if
+    --Connection is invalid. (-609)
+    --The variable playing is not defined. (-2753)
+    if (errorNumber is in {-609,-2753}) then return
     error errorMessage number errorNumber
   end try
 end tell

@@ -26,10 +26,10 @@ Available commands:
     pid                     VLC.app pid
 
 EOF
-    [[ $1 == "-h" ]] || [[ $1 == "--help" ]]; exit
+    [ "$1" = "-h" ] || [ "$1" = "--help" ]; exit
 }
 
-[[ $1 == "-h" ]] || [[ $1 == "--help" ]] && usage "$@"
+[ "$1" = "-h" ] || [ "$1" = "--help" ] && usage "$@"
 
 [[ $OSTYPE != *"darwin"* ]] && echo "OS X only" && exit
 [[ $# == 0 ]] && usage
